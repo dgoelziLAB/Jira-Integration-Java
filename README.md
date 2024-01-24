@@ -21,11 +21,45 @@ This repo will serve as the installation documentation for the process of integr
   This file contains two import parts of the integration process. The first one is that it will grab the itestresults after the test is executed and depeneding on the results it will tell the "JiraCreateIssue" file which issue to create. The second is the fact that the Jira instance information is stored here. The infromation is used by the api in order to comunicate with the jira instance. 
 
   Below are some kep points of the code
+  
+  
+//Provide proper Jira project URL ex: https://browsertack.atlassian.net
 
+//Jira User name ex: browserstack@gmail.com
+
+//API token copy from Jira dashboard ex: lorelimpusm12uijk
+
+//Project key should be, Short name ex: BS
   ```java
 JiraServiceProvider JiraServiceProvider = new JiraServiceProvider("https://ilabpoc.atlassian.net/","daniel.goelz@ilabqa.com",
-"ATATT3xFfGF0b7hxrOUYZnJG8LI-1PrAKcmG6AaEob6HOo7i2zMjm1-WnscgusEwpeJ-JwW-coRjN4UfxAFWir_eIt6SenYzYC_V2oxrfukfRWoSKt5FXQIk8y0u5VxXZ4KP_SxqvSfuOrr06DBfMTSzMT78-WXo6RzsFs6itW9aa1L_vpFX7U4=BF9732CD", "JWXI");
+"ATATT3xFfGF0b7hxrOUYZnJG8LI-1PrAKcmG6AaEob6HOo7i2zMjm1-WnscgusEwpeJ-JwW-coRjN4UfxAFWir_eIt6SenYzYC_V2oxrfukfRWoSKt5", "JWXI");
+
 ```
+The code snippet above is where you add your own instance data and API token.
+
+### JiraCreateIssue
+Uses Annotations to allow it to be accessable during runtime, sourecode and class files.
+```java
+@Retention(RetentionPolicy.RUNTIME)
+
+    public @interface JiraCreateIssue {
+
+        boolean isCreateIssue();
+
+    }
+
+```
+
+###JiraServiceProvider
+**Description:** A class for interacting with the Jira API to create new issues.
+- **Package:** `utilities`
+- **Dependencies:** `net.rcarz.jiraclient` library
+
+
+
+
+
+
 
 
 ## Installation
