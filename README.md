@@ -146,6 +146,7 @@ Code was added to the method above in oprder to reduce the manual interactions t
 
 ## Updates 
   Few updates being worked on
+  ***
     * getting screen shots and HTML report attached to Execution Issue
     * add more scenarios where issues are crated 
 
