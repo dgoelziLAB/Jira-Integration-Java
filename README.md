@@ -18,7 +18,7 @@ This repo will serve as the installation documentation for the process of integr
  ## Files
 
   ### Listener
-  The `jiraTestListener` class is a TestNG listener designed to integrate with Jira for logging test results. It creates Jira issues based on annotations for test failures and successes.
+  The `Listener` class is a TestNG listener designed to integrate with Jira for logging test results. It creates Jira issues based on annotations for test failures and successes.
 
   
   
@@ -150,3 +150,57 @@ Code was added to the method above in oprder to reduce the manual interactions t
 ## Installation
 
 Include instructions on how to install and set up your project. This may include dependencies, environment setup, or any other relevant steps.
+
+### Test File Changes
+
+```java
+import org.testng.annotations.Test;
+import utilities.JiraCreateIssue;
+
+
+import java.time.Duration;
+
+
+public class mk1 extends BaseTest {
+
+    @JiraCreateIssue(isCreateIssue=true)
+    @Test
+    public void Test_mk1() {
+```
+
+Make sure to add the anotation `@JiraCreateIssue(isCreateIssue=true)`and `@Test` to each of your tests. 
+
+### Pom file changes
+
+  ```xml
+<dependency>
+      <groupId>net.rcarz</groupId>
+      <artifactId>jira-client</artifactId>
+      <version>0.5</version>
+    </dependency>
+```
+
+
+###Runtime
+
+Make sure to add the listeners to the runtime configurations in inteliji teh process will look similar to below.
+
+<img width="948" alt="image" src="https://github.com/iLABQA/Jira-Integration-Java/assets/48806193/9d742423-4d7a-4fc7-9800-347435b03060">
+
+select edit configurations 
+<img width="97" alt="image" src="https://github.com/iLABQA/Jira-Integration-Java/assets/48806193/2868752f-d124-4120-a29e-02b5cde30963">
+
+pick your test file
+<img width="519" alt="image" src="https://github.com/iLABQA/Jira-Integration-Java/assets/48806193/f8f822bf-4a7e-4629-a85d-cd7f770e289b">
+
+Select listeners
+<img width="519" alt="image" src="https://github.com/iLABQA/Jira-Integration-Java/assets/48806193/8af8e1a3-889c-41b4-9e8e-7de9aae93990">
+
+Add all lkisteners
+<img width="515" alt="image" src="https://github.com/iLABQA/Jira-Integration-Java/assets/48806193/577ea805-73f6-4613-b6d4-c0db2d0829ef">
+
+
+
+
+
+
