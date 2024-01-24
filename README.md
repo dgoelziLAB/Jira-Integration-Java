@@ -39,6 +39,7 @@ The code snippet above is where you add your own instance data and API token.
 
 ### JiraCreateIssue
 Uses Annotations to allow it to be accessable during runtime, sourecode and class files.
+
 ```java
 @Retention(RetentionPolicy.RUNTIME)
 
