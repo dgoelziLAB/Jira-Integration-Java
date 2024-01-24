@@ -144,7 +144,10 @@ public void createJiraIssue(String issueType, String summary, String description
 Code was added to the method above in oprder to reduce the manual interactions that are needed between runs. It currently looks for the current time attached to the issue summary
 
 
-
+## Updates 
+  Few updates being worked on
+    - getting screen shots and HTML report attached to Execution Issue
+    - add more 
 
 
 
