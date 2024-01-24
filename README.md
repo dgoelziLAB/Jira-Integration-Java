@@ -199,7 +199,7 @@ pick your test file
 Select listeners
 <img width="519" alt="image" src="https://github.com/iLABQA/Jira-Integration-Java/assets/48806193/8af8e1a3-889c-41b4-9e8e-7de9aae93990">
 
-Add all lkisteners
+Add all listeners
 <img width="515" alt="image" src="https://github.com/iLABQA/Jira-Integration-Java/assets/48806193/577ea805-73f6-4613-b6d4-c0db2d0829ef">
 
 
