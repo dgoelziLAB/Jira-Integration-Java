@@ -18,9 +18,8 @@ This repo will serve as the installation documentation for the process of integr
  ## Files
 
   ### Listener
-  This file contains two import parts of the integration process. The first one is that it will grab the itestresults after the test is executed and depeneding on the results it will tell the "JiraCreateIssue" file which issue to create. The second is the fact that the Jira instance information is stored here. The infromation is used by the api in order to comunicate with the jira instance. 
+  The `jiraTestListener` class is a TestNG listener designed to integrate with Jira for logging test results. It creates Jira issues based on annotations for test failures and successes.
 
-  Below are some kep points of the code
   
   
 
@@ -68,7 +67,7 @@ public void onTestFailure(ITestResult result) {
     }
 
 ```
-The code snippet above is where you add your own instance data and API token.
+
 
 ### JiraCreateIssue
 Uses Annotations to allow it to be accessable during runtime, sourecode and class files.
@@ -88,6 +87,58 @@ Uses Annotations to allow it to be accessable during runtime, sourecode and clas
 A class for interacting with the Jira API to create new issues.
 
 - **Dependencies:** `net.rcarz.jiraclient` library
+
+
+```java
+private JiraClient Jira;
+
+        private String project;
+
+        private String JiraUrl;
+
+        public JiraServiceProvider(String JiraUrl, String username, String password, String project) {
+
+            this.JiraUrl=JiraUrl;
+
+            // create basic authentication object
+
+            BasicCredentials creds = new BasicCredentials(username, password);
+
+            // initialize the Jira client with the url and the credentials
+
+            Jira = new JiraClient(JiraUrl, creds);
+
+            this.project = project;
+
+        }
+
+
+```
+Starts the connection to the Jira Instance
+
+
+```java
+public void createJiraIssue(String issueType, String summary, String description, String reporterName) {
+
+
+
+
+            try {
+
+                //Avoid Creating Duplicate Issue
+                Date currentTime = new Date();
+
+                Issue.SearchResult sr = Jira.searchIssues("summary ~ \""+summary+ currentTime+"\"");
+
+                if(sr.total!=0) {
+
+                    System.out.println("Same Issue Already Exists on Jira");
+
+                    return;
+
+                }
+```
+Code was added to the method above in oprder to reduce the manual interactions that are needed between runs. It currently looks for the current time attached to the issue summary
 
 
 
