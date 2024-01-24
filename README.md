@@ -23,7 +23,8 @@ This repo will serve as the installation documentation for the process of integr
   Below are some kep points of the code
 
   ```java
-JiraServiceProvider JiraServiceProvider = new JiraServiceProvider("https://ilabpoc.atlassian.net/","daniel.goelz@ilabqa.com", "ATATT3xFfGF0b7hxrOUYZnJG8LI-1PrAKcmG6AaEob6HOo7i2zMjm1-WnscgusEwpeJ-JwW-coRjN4UfxAFWir_eIt6SenYzYC_V2oxrfukfRWoSKt5FXQIk8y0u5VxXZ4KP_SxqvSfuOrr06DBfMTSzMT78-WXo6RzsFs6itW9aa1L_vpFX7U4=BF9732CD", "JWXI");
+JiraServiceProvider JiraServiceProvider = new JiraServiceProvider("https://ilabpoc.atlassian.net/","daniel.goelz@ilabqa.com",
+"ATATT3xFfGF0b7hxrOUYZnJG8LI-1PrAKcmG6AaEob6HOo7i2zMjm1-WnscgusEwpeJ-JwW-coRjN4UfxAFWir_eIt6SenYzYC_V2oxrfukfRWoSKt5FXQIk8y0u5VxXZ4KP_SxqvSfuOrr06DBfMTSzMT78-WXo6RzsFs6itW9aa1L_vpFX7U4=BF9732CD", "JWXI");
 ```
 
 
