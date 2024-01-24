@@ -67,7 +67,7 @@ public void onTestFailure(ITestResult result) {
     }
 
 ```
-
+Be sure to add your JIra Instance info to this file
 
 ### JiraCreateIssue
 Uses Annotations to allow it to be accessable during runtime, sourecode and class files.
