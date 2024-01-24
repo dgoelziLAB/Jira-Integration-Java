@@ -85,7 +85,7 @@ Uses Annotations to allow it to be accessable during runtime, sourecode and clas
 
 ```
 
-###JiraServiceProvider
+### JiraServiceProvider
 
 A class for interacting with the Jira API to create new issues.
 
