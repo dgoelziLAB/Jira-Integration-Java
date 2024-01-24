@@ -52,7 +52,7 @@ Uses Annotations to allow it to be accessable during runtime, sourecode and clas
 
 ###JiraServiceProvider
 **Description:** A class for interacting with the Jira API to create new issues.
-- **Package:** `utilities`
+
 - **Dependencies:** `net.rcarz.jiraclient` library
 
 
