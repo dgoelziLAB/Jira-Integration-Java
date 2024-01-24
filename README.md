@@ -18,6 +18,7 @@ This repo will serve as the installation documentation for the process of integr
  ## Files
 
   ### Listener
+  
   The `Listener` class is a TestNG listener designed to integrate with Jira for logging test results. It creates Jira issues based on annotations for test failures and successes.
 
   
@@ -70,6 +71,7 @@ public void onTestFailure(ITestResult result) {
 Be sure to add your JIra Instance info to this file
 
 ### JiraCreateIssue
+
 Uses Annotations to allow it to be accessable during runtime, sourecode and class files.
 
 ```java
@@ -84,6 +86,7 @@ Uses Annotations to allow it to be accessable during runtime, sourecode and clas
 ```
 
 ###JiraServiceProvider
+
 A class for interacting with the Jira API to create new issues.
 
 - **Dependencies:** `net.rcarz.jiraclient` library
